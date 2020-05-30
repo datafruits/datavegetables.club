@@ -1,1 +1,55 @@
-{{yield}}
+<div id="chat-room">
+  <div id="chat-area">
+    <ChatMessages
+      @messages={{messages}}
+      @gifsEnabled={{gifsEnabled}}
+      @newMessagesAvailable={{action "newMessagesAvailable"}}
+      @onScroll={{action "onScroll"}}
+    />
+    {{#if newMessagesBelow}}
+      <div id="new-messages-below">
+        <span>{{t "chat.new_messages"}}</span>
+      </div>
+    {{/if}}
+    {{#if networkStatus.isOffline}}
+      <div id="offline">
+        <span>{{t "chat.offline"}}</span>
+      </div>
+    {{/if}}
+    <ul id="userlist">
+      {{#each joinedUsers as |joinedUser|}}
+        <UserListItem @user={{joinedUser}} />
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<div id="controls">
+  {{#if joinedChat}}
+    <form align="center" id="send-message">
+      <ChatInputMessage  @isOffline={{networkStatus.isOffline}} />
+      <button class="cool-button" {{action "toggleGifsEnabled"}}>
+        {{images-enabled-button-label gifsEnabled}}
+      </button>
+    </form>
+  {{else}}
+    <form align="center" id="enter-chat">
+      <Input
+        @type="text"
+        @name="nick"
+        @value={{nick}}
+        @autocorrect="off"
+        @autocapitalize="none"
+        placeholder={{t "chat.nickname"}}
+      />
+      <button {{action "enterChat"}}
+        class="cool-button"
+        disabled={{or disableJoinButton networkStatus.isOffline}}
+      >
+        {{t "chat.join"}}
+      </button>
+      <button class="cool-button" {{action "toggleGifsEnabled"}}>
+        {{images-enabled-button-label gifsEnabled}}
+      </button>
+    </form>
+  {{/if}}
+</div>

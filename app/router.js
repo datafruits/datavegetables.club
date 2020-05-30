@@ -7,4 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('vol01');
+  this.route('datazone');
+  this.route('dieing');
 });

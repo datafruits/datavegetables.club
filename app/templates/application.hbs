@@ -2,7 +2,9 @@
 
 <h1 class="t1">DATA</h1><h1 class="t2">vegetables</h1>
 <Player />
-<Chat />
+<NetworkStatus as |status|>
+  <Chat @networkStatus={{status}} />
+</NetworkStatus>
 
 <p>are you lost ? site guide:</p>
 <ul>

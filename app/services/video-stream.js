@@ -7,9 +7,6 @@ import fetch from 'fetch';
 
 @classic
 export default class VideoStreamService extends Service {
-  @service
-  rollbar;
-
   init() {
     super.init(...arguments);
     this.set('streamHost', ENV.STREAM_HOST);
@@ -68,7 +65,6 @@ export default class VideoStreamService extends Service {
           // Autoplay was prevented.
           console.log(`video autoplay failed: ${error}`);// eslint-disable-line no-console
           player.userActive(false);
-          this.get('rollbar').error(`video autoplay failed: ${error}`);
         });
       }
     });
@@ -86,7 +82,6 @@ export default class VideoStreamService extends Service {
         // Autoplay was prevented.
         console.log(`video play failed: ${error}`);// eslint-disable-line no-console
         player.userActive(false);
-        this.get('rollbar').error(`video autoplay failed: ${error}`);
       });
     }
   }

@@ -1,0 +1,25 @@
+<li class="message">
+  <span class="message-timestamp">
+    {{format-message-timestamp message.timestamp}}
+  </span>
+  <span class="username">
+    {{format-message-user message.user}}
+  </span>
+  <span class="message-body">
+    {{format-message-body message.body}}
+  </span>
+</li>
+{{#if gifsEnabled}}
+  {{#if hasImage}}
+    <li class="message">
+      <span class="message-body">
+        <ChatLazyImage
+          @url={{imgUrl}}
+          @errorText="Image failed to load."
+          @adjustScrolling={{adjustScrolling}}
+          class="chat-image"
+        />
+      </span>
+    </li>
+  {{/if}}
+{{/if}}

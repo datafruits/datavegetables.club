@@ -1,0 +1,9 @@
+{{#each messages as |message|}}
+  <ChatMessage
+    @message={{message}}
+    @gifsEnabled={{gifsEnabled}}
+    @newMessagesAvailable={{newMessagesAvailable}}
+    @setupAutoscroll={{action "setupAutoscroll"}}
+    @adjustScrolling={{action "adjustScrolling"}}
+  />
+{{/each}}

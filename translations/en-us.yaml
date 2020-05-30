@@ -1,0 +1,11 @@
+price_banner: The {product} costs {price, number, USD}
+player:
+  play_button_label: 'play'
+  return_to_live: 'return to live stream'
+  loading: '↻'
+  pause: '❚❚'
+  stop: '▇'
+  play: '▶︎'
+  compatibility:
+    warning: 'To view this video please enable JavaScript, and consider upgrading to a web browser that'
+    linktext: 'supports HTML5 video'

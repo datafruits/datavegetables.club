@@ -23,7 +23,7 @@ export default class ChatMessages extends Component {
       this.set('willAutoscroll', true);
     }else{
       this.newMessagesAvailable();
-      this.set('willAutoscroll', false);
+      this.set('willAutoscroll', true);
     }
   }
 
@@ -31,15 +31,13 @@ export default class ChatMessages extends Component {
   adjustScrolling() {
     if(this.willAutoscroll){
       const messages = document.getElementById('messages');
-      //$('#messages')[0].scrollTop = $('#messages')[0].scrollHeight;
       messages.scrollTop = messages.scrollHeight;
     }
   }
 
   scrolledToBottom() {
     const messages = document.getElementById('messages');
-    const messagesHeight = messages.getBoundingClientRect().height;
-    return messages.scrollHeight - messages.scrollTop - messagesHeight < 1;
+    return messages.scrollHeight - messages.scrollTop === messages.clientHeight;
   }
 
   didInsertElement() {

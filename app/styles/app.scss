@@ -145,7 +145,7 @@ text-shadow: -1px -1px hsl(0,100%,50%), 1px 1px hsl(5.4, 100%, 50%), 3px 2px hsl
 @font-face {
   font-family: 'Nikumaru';
   src:
-    url('/fonts/nikumaru.otf')
+    url('/vendor/nikumaru.otf')
     format('opentype');
 }
 
@@ -412,3 +412,20 @@ a:hover {
   }
 }
 
+.radio-bar {
+  background: #660066;
+  padding: 5px;
+  color: $yellow;
+  font-size: 2rem;
+  .player-controls {
+    a {
+      color: $yellow;
+      text-decoration: none;
+      background: none;
+      font-size: 3rem;
+      &:hover {
+        transform: rotate(90deg) scale(2.3);
+      }
+    }
+  }
+}

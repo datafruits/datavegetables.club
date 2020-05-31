@@ -7,7 +7,14 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('home', { path: '/' });
   this.route('vol01');
   this.route('datazone');
   this.route('dieing');
+  this.route('memories-of-onsen');
+  this.route('no-talk');
+  this.route('world-wide-wow');
+  this.route('kindofadirtychineserestaurant');
+  this.route('timestrangers');
+  this.route('manga-relay');
 });

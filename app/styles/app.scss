@@ -49,6 +49,12 @@ $blue:  #00b4ff;
   }
 }
 
+body.no-talk {
+  p {
+    background: pink;
+  }
+}
+
 body.vol01 {
   background: salmon;
 }
@@ -339,7 +345,6 @@ a:hover {
     min-height: 0; //ff hack? https://bugzilla.mozilla.org/show_bug.cgi?id=1043520 https://bugzilla.mozilla.org/show_bug.cgi?id=570036
     #messages {
       overflow-y: scroll;
-      flex-grow: 3;
       img {
         max-width: 95%;
         max-height: 95%;

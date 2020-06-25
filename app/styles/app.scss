@@ -49,7 +49,7 @@ $blue:  #00b4ff;
   }
 }
 
-body {
+body.vol01 {
   background: salmon;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 body.datazone {
-  background: url("/images/bricks.png");
+  background: url("/assets/images/bricks.png");
   p {
     color: white;
     font-size: 80px;
@@ -114,7 +114,7 @@ body.datazone {
 body.memories-of-onsen {
   background: #46ea7e;
   .container {
-    background: url('/images/onsen_wow.png');
+    background: url('/assets/images/onsen_wow.png');
     margin: 0 auto;
     width: 65%;
     height: 100%;
@@ -125,7 +125,7 @@ body.memories-of-onsen {
   margin: 0 auto;
   width: 85%;
   background: white;
-  background: url("/images/data_vegetables_pattern.png");
+  background: url("/assets/images/data_vegetables_pattern.png");
   height: 100%;
 }
 

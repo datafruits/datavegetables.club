@@ -17,4 +17,5 @@ Router.map(function() {
   this.route('kindofadirtychineserestaurant');
   this.route('timestrangers');
   this.route('manga-relay');
+  this.route('money');
 });

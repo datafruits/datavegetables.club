@@ -1,4 +1,4 @@
-import Route from '@ember/routing/route';
+import ApplicationRoute from '../routes/application';
 
-export default class TimestrangersRoute extends Route {
+export default class TimestrangersRoute extends ApplicationRoute {
 }

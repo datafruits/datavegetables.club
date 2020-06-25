@@ -1,4 +1,4 @@
-import Route from '@ember/routing/route';
+import ApplicationRoute from '../routes/application';
 
-export default class MemoriesOfOnsenRoute extends Route {
+export default class MemoriesOfOnsenRoute extends ApplicationRoute {
 }
